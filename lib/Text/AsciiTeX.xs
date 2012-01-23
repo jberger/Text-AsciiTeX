@@ -8,7 +8,7 @@ SV* render (SV* eq) {
   int ll=80;
   int i, cols, rows;
   char **screen;
-  SV* ret = newRV_noinc((SV*)newAV());
+  AV* ret = newAV();
 
   screen = asciiTeX(SvPV_nolen(eq), ll, &cols, &rows);
 
@@ -17,12 +17,12 @@ SV* render (SV* eq) {
 	if (cols<0)
 		warn("%s\n", screen[i]);
 	else
-		av_push((AV *)SvRV(ret), newSVpvf("%s", screen[i]));
+		av_push(ret, newSVpvf("%s", screen[i]));
 	free(screen[i]);
   }
   free(screen);
 
-  return ret;
+  return newRV_noinc((SV*)ret);
 }
 
 MODULE = Text::AsciiTeX		PACKAGE = Text::AsciiTeX	
