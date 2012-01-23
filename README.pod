@@ -20,6 +20,8 @@ This module exports the C<render> function.
 
 The function C<render> accepts a string containing a formula in (La)TeX formatting. The return value is an array reference. Each element of the array is a string for each row of the art. Printing each line, terminated by a newline will probably do what you expect.
 
+For examples and a list of allowed syntax read L<Text::AsciiTeX::Syntax>.
+
 =head1 UNDERLYING TECHNOLOGIES
 
 This module is basically just a C-level Perl wrapper of F<AsciiTeX> written by Bart Pieters. That project is hosted at L<http://asciitex.sourceforge.net/>. AsciiTeX in turn was a fork of F<eqascii> which was written by Przemek Borys. This module owes a debt of thanks to both authors.
