@@ -84,12 +84,12 @@ Escapes the character C<a>. Useful for inserting characters like C<^>, and C<_> 
 
 =item array environment
        
-\begin{array}[pos]{column alignments}
-  a00 & a01 & ... a0n \\
-  a10 & a11 & ... a1n \\
-  ... & ... & ... ... \\
-  am0 & am1 & ... amn
-\end{array}
+ \begin{array}[pos]{column alignments}
+   a00 & a01 & ... a0n \\
+   a10 & a11 & ... a1n \\
+   ... & ... & ... ... \\
+   am0 & am1 & ... amn
+ \end{array}
        
 Makes an array. The optional argument pos sets  the  alignment  of  the
 array to t(op), b(ottom) or c(enter). The column alignments consist of
