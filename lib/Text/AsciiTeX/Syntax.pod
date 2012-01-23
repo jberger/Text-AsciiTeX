@@ -142,7 +142,7 @@ You can pass any of these examples to C<render> to see what it does.
  \frac{1}{\sqrt{2} + ...
  }}}}
  
- =head1 AUTHOR
+=head1 AUTHOR
  
- This document is a direct port from the documenation of asciiTeX program written by Bart Pieters. See L<http://asciitex.sourceforge.net/>.
+This document is a direct port from the documenation of asciiTeX program written by Bart Pieters. See L<http://asciitex.sourceforge.net/>.
 
