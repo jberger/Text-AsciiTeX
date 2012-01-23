@@ -1,7 +1,9 @@
 Build.PL
 lib/Text/AsciiTeX.pm
 lib/Text/AsciiTeX.xs
+lib/Text/AsciiTeX/Syntax.pod
 MANIFEST			This list of files
+README.pod
 src/array.c
 src/array.h
 src/asciiTeX.c

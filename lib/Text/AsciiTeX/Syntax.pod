@@ -1,0 +1,133 @@
+=head1 DESCRIPTION OF ASCIITEX SYNTAX
+
+=over
+
+=item C<\frac{a}{b}>
+
+A fraction of a and b.
+
+=item C<a^{b}>
+
+A superscript. One can also omit the braces. In this  case  the first character following ^ will be superscripted.
+
+=item C<a_{b}>
+
+A  subscript.  Works  just  like the superscript (well, not exactly of course).
+
+=item C<\sqrt[n]{a}>
+
+A n-th root of a, the argument [n] is optional. Without it it produces the square root of a.
+
+=item C<\sum>
+
+Expands to a sigma
+
+=item C<\prod>
+
+Expands to the product mark (pi).
+
+=item C<\int>
+
+Expands to the integral mark.
+
+=item C<\oint>
+
+A closed path integral.
+
+=item C<\left(> , C<\right)>
+
+Expands to braces which adept to the height of their content. Available left braces are: C<([{|> The correspondingright  braces  are:  C<)]}|>  All brace  types can be opened by C<\left.>  or closed by <\right.>, producing a single right or left brace, respectively.
+
+=item C<\leadsto>
+
+Expands to an arrow (C<< ~> >>), May look ugly depending on your fonts.
+
+=item C<\to>
+
+Expands to an arrow (C<< -> >>).
+
+       \limit{x}
+       Expands to a limit, i.e. \limit{x \to 0}.
+
+       \overline{X}
+       Draws a line above expression X
+
+       \underline{X}
+       Draws a line under expression X
+
+       \lceil
+       Left ceiling symbol
+
+       \rceil
+       Right ceiling symbol
+
+       \lfloor
+       Left floor symbol
+
+       \rfloor
+       Right floor symbol
+
+       \\
+       Insert a line break.
+
+       \begin{array}[pos]{column alignments}
+          a00 & a01 & ... a0n \\
+          a10 & a11 & ... a1n \\
+          ... & ... & ... ... \\
+          am0 & am1 & ... amn
+       \end{array}
+       Makes an array. The optional argument pos sets  the  alignment  of  the
+       array  to t(op), b(ottom) or c(enter). The column alignments consist of
+       one character per column, l(eft), c(enter), or r(ight). Currently asci-
+       iTeX  does  notsupport vertical or horizontal lines, e.g. the column-
+       alignment specification \{|c|}\ will lead to  errors.  Note,  that  the
+       string  \begin{array}  must  not contain spaces. Cells of the array may
+       contain formulas and sub-arrays.
+
+       \a
+       Escapes the character a. Useful for inserting characters like ^, and  _
+       in your equation.
+
+=back
+
+
+=head1 EXAMPLES
+
+You can copy and paste some of these examples in the equation input field and hit generate to see what it does.
+
+\frac{1}{1+x}
+
+\lfloorx\rfloor = x -\frac{1}{2} + \sum_{k=1}^{\infty}
+\frac{sin(2 Pi k x)}{pi k}
+
+\begin{array}{ccc}
+x_{11} & x_{12} & x_{13}\\
+x_{21} & x_{22} & x_{23}\\
+x_{31} & x_{32} & x_{33}
+\end{array}
+
+\left[
+\begin{array}{ccc}
+x_{11} & x_{12} & x_{13}\\
+x_{21} & x_{22} & x_{23}\\
+x_{31} & x_{32} & x_{33}
+\end{array}
+\right]
+
+\int_0^W \frac{np}{n+p}dx = \int_0^W \frac{n_0}{exp \left( 
+\frac{E_0(x-x_0)}{kT} \right)+exp \left( -\frac{E_0(x-x_0)}{kT}\right)}
+dx=\frac{n_0kT}{E_0} \left[ arctan \left( exp 
+\left[\frac{E_0(x-x_0)}{kT}\right]\right)\right]^{x=W}_{x=0}~ 
+\frac{n_0kT}{E_0} pi
+
+f(x) = \left{\begin{array}{lr} 
+\frac{1}{x+1} +12 & \-12<x<0\\
+ & \\ 13-x & x<\-12, x>0
+\end{array}\right.
+
+a = \frac{1}{\sqrt{2} + 
+\frac{1}{\sqrt{2} + 
+\frac{1}{\sqrt{2} + 
+\frac{1}{\sqrt{2} + ...
+}}}}
+
