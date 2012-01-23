@@ -46,47 +46,58 @@ Expands to an arrow (C<< ~> >>), May look ugly depending on your fonts.
 
 Expands to an arrow (C<< -> >>).
 
-       \limit{x}
-       Expands to a limit, i.e. \limit{x \to 0}.
+=item C<\limit{x}>
 
-       \overline{X}
-       Draws a line above expression X
+Expands to a limit, i.e. C<< \limit{x \to 0} >>.
 
-       \underline{X}
-       Draws a line under expression X
+=item C<\overline{X}>
 
-       \lceil
-       Left ceiling symbol
+Draws a line above expression X
 
-       \rceil
-       Right ceiling symbol
+=item C<\underline{X}>
 
-       \lfloor
-       Left floor symbol
+Draws a line under expression X
 
-       \rfloor
-       Right floor symbol
+=item C<\lceil>
 
-       \\
-       Insert a line break.
+Left ceiling symbol
 
+=item C<\rceil>
+
+Right ceiling symbol
+
+=item C<\lfloor>
+
+Left floor symbol
+
+=item C<\rfloor>
+
+Right floor symbol
+
+=item C<< \\ >>
+
+Insert a line break.
+
+=item array environment
+       
        \begin{array}[pos]{column alignments}
           a00 & a01 & ... a0n \\
           a10 & a11 & ... a1n \\
           ... & ... & ... ... \\
           am0 & am1 & ... amn
        \end{array}
-       Makes an array. The optional argument pos sets  the  alignment  of  the
-       array  to t(op), b(ottom) or c(enter). The column alignments consist of
-       one character per column, l(eft), c(enter), or r(ight). Currently asci-
-       iTeX  does  notsupport vertical or horizontal lines, e.g. the column-
-       alignment specification \{|c|}\ will lead to  errors.  Note,  that  the
-       string  \begin{array}  must  not contain spaces. Cells of the array may
-       contain formulas and sub-arrays.
+       
+Makes an array. The optional argument pos sets  the  alignment  of  the
+array  to t(op), b(ottom) or c(enter). The column alignments consist of
+one character per column, l(eft), c(enter), or r(ight). Currently asciiTeX
+does  not support vertical or horizontal lines, e.g. the column-
+alignment specification \{|c|}\ will lead to  errors.  Note,  that  the
+string  \begin{array}  must  not contain spaces. Cells of the array may
+contain formulas and sub-arrays.
 
-       \a
-       Escapes the character a. Useful for inserting characters like ^, and  _
-       in your equation.
+=item C<\a>
+       
+Escapes the character C<a>. Useful for inserting characters like C<^>, and  C<_> in your equation.
 
 =back
 
