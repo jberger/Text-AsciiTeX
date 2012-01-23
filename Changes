@@ -1,0 +1,6 @@
+Revision history for Perl extension Text::AsciiTeX.
+
+0.01  Sun Jan 23 2012 
+	- original version
+	- provides render function
+
