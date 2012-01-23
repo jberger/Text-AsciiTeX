@@ -1,4 +1,4 @@
-=head1 DESCRIPTION OF ASCIITEX SYNTAX
+=head1 DESCRIPTION OF AsciiTeX SYNTAX
 
 =over
 
@@ -16,7 +16,7 @@ A subscript.  Works just like the superscript (well, not exactly of course).
 
 =item C<\sqrt[n]{a}>
 
-A C<n>-th root of C<a>, the argument [n] is optional. Without it it produces the square root of C<a>.
+A C<n>-th root of C<a>, the argument C<[n]> is optional. Without it it produces the square root of C<a>.
 
 =item C<\sum>
 
@@ -78,14 +78,18 @@ Right floor symbol
 
 Insert a line break.
 
+=item C<\a>
+       
+Escapes the character C<a>. Useful for inserting characters like C<^>, and C<_> in your equation.
+
 =item array environment
        
-       \begin{array}[pos]{column alignments}
-          a00 & a01 & ... a0n \\
-          a10 & a11 & ... a1n \\
-          ... & ... & ... ... \\
-          am0 & am1 & ... amn
-       \end{array}
+\begin{array}[pos]{column alignments}
+  a00 & a01 & ... a0n \\
+  a10 & a11 & ... a1n \\
+  ... & ... & ... ... \\
+  am0 & am1 & ... amn
+\end{array}
        
 Makes an array. The optional argument pos sets  the  alignment  of  the
 array to t(op), b(ottom) or c(enter). The column alignments consist of
@@ -95,16 +99,12 @@ alignment specification C<{|c|}> will lead to  errors.  Note, that the
 string C<\begin{array}> must not contain spaces. Cells of the array may
 contain formulas and sub-arrays.
 
-=item C<\a>
-       
-Escapes the character C<a>. Useful for inserting characters like C<^>, and C<_> in your equation.
-
 =back
 
 
 =head1 EXAMPLES
 
-You can copy and paste some of these examples in the equation input field and hit generate to see what it does.
+You can pass any of these examples to C<render> to see what it does.
 
  \frac{1}{1+x}
 
