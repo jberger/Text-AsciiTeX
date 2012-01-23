@@ -45,7 +45,7 @@ For examples and a list of allowed syntax read L<Text::AsciiTeX::Syntax>.
 
 =head1 UNDERLYING TECHNOLOGIES
 
-This module is basically just a C-level Perl wrapper of F<AsciiTeX> written by Bart Pieters. That project is hosted at L<http://asciitex.sourceforge.net/>. AsciiTeX in turn was a fork of F<eqascii> which was written by Przemek Borys. This module owes a debt of thanks to both authors.
+This module is basically just a C-level Perl wrapper of F<AsciiTeX> written by Bart Pieters. That project is hosted at L<http://asciitex.sourceforge.net/>. F<AsciiTeX> in turn was a fork of F<eqascii> which was written by Przemek Borys. This module owes a debt of thanks to both authors.
 
 =head1 SOURCE REPOSITORY
 
