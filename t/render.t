@@ -1,7 +1,7 @@
 use strict;
 use warnings;
 
-use Test::More tests => 2;
+use Test::More tests => 3;
 
 use Text::AsciiTeX;
 
@@ -17,3 +17,7 @@ use Text::AsciiTeX;
   ok( $warn, "Warnings issued on incomplete LaTeX formula");
 }
 
+{
+  my $text = render('\exp');
+  is( $text->[0], 'exp', "escaping function works as desired");
+}
