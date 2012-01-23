@@ -91,8 +91,8 @@ Escapes the character C<a>. Useful for inserting characters like C<^>, and C<_> 
    am0 & am1 & ... amn
  \end{array}
        
-Makes an array. The optional argument pos sets  the  alignment  of  the
-array to t(op), b(ottom) or c(enter). The column alignments consist of
+Makes an array. The optional argument C<pos> sets  the  alignment  of  the
+array to C<t> (top), C<b> (bottom) or C<c> (center). The column alignments consist of
 one character per column, C<l> (left), C<c> (center), or C<r> (right). Currently asciiTeX
 does  not support vertical or horizontal lines, e.g. the column-
 alignment specification C<{|c|}> will lead to  errors.  Note, that the
@@ -141,4 +141,8 @@ You can pass any of these examples to C<render> to see what it does.
  \frac{1}{\sqrt{2} + 
  \frac{1}{\sqrt{2} + ...
  }}}}
+ 
+ =head1 AUTHOR
+ 
+ This document is a direct port from the documenation of asciiTeX program written by Bart Pieters. See L<http://asciitex.sourceforge.net/>.
 
