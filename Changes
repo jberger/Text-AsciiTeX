@@ -1,6 +1,7 @@
 Revision history for Perl extension Text::AsciiTeX.
 
 0.02  
+	- render now warns on errors from AsciiTeX
 
 0.01  Mon Jan 23 2012 
 	- original version

@@ -14,7 +14,10 @@ SV* render (SV* eq) {
 
   for (i = 0; i < rows; i++)
   {
-	av_push((AV *)SvRV(ret), newSVpvf("%s", screen[i]));
+	if (cols<0)
+		warn("%s\n", screen[i]);
+	else
+		av_push((AV *)SvRV(ret), newSVpvf("%s", screen[i]));
 	free(screen[i]);
   }
   free(screen);
