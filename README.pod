@@ -5,8 +5,17 @@ Text::AsciiTeX - Convert (La)TeX formulas to ASCII art
 =head1 SYNOPSIS
 
  use Text::AsciiArt;
+
+ #equivalent examples
+
+ my @text_array = render('\frac{1}{e}');
+ print "$_\n" for @text_array;
+
  my $text_array = render('\frac{1}{e}');
- print "$_\n" for @$text_array;
+ print "$text_array\n";
+
+ render('\frac{1}{e}');
+ print "\n";
 
 =head1 DESCRIPTION
 
@@ -44,7 +53,7 @@ In void context, C<render> will print the scalar context return directly to the 
 
 =head1 EXAMPLES
 
-For examples and a list of allowed syntax read L<Text::AsciiTeX::Syntax>.
+For use examples see L</SYNOPSIS>. For a list of allowed syntax and syntax examples read L<Text::AsciiTeX::Syntax>.
 
 =head1 UNDERLYING TECHNOLOGIES
 
