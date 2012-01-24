@@ -20,7 +20,7 @@ my $builder = Module::Build->new(
       'ExtUtils::CBuilder' => 0,
     },
     c_source => 'src',
-    extra_compiler_flags => '-Isrc',
+    extra_compiler_flags => '-Isrc/asciitex -Isrc/perl',
 );
 
 $builder->create_build_script;

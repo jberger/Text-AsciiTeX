@@ -8,6 +8,9 @@
 
 #include "asciiTeX.h"
 
+/* prevents collision of free() with Perl's free() in XS */
+#include "MyFree.h"
+
 SV* c_render (SV* eq, int ll) {
   int i, cols, rows;
   char **screen;
@@ -21,9 +24,9 @@ SV* c_render (SV* eq, int ll) {
 		warn("%s\n", screen[i]);
 	else
 		av_push(ret, newSVpvf("%s", screen[i]));
-	free(screen[i]);
+	MyFree(screen[i]);
   }
-  free(screen);
+  MyFree(screen);
 
   return newRV_noinc((SV*)ret);
 }
