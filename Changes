@@ -1,5 +1,8 @@
 Revision history for Perl extension Text::AsciiTeX.
 
+0.04  
+	- Added ppport.h
+
 0.03  Tue Jan 24 2012  
 	- not back compatible to 0.02! 
 	- render is now context aware

@@ -2,7 +2,11 @@
 #include "perl.h"
 #include "XSUB.h"
 
-#include <asciiTeX.h>
+#define NEED_newRV_noinc
+#define NEED_sv_2pv_flags
+#include "ppport.h"
+
+#include "asciiTeX.h"
 
 SV* c_render (SV* eq, int ll) {
   int i, cols, rows;
