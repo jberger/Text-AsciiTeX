@@ -60,6 +60,8 @@ Text::AsciiTeX - Convert (La)TeX formulas to ASCII art
  my $text_array = render('\frac{1}{e}');
  print $text_array;
 
+ print scalar render('\frac{1}{e}');
+
  render('\frac{1}{e}');
 
 =head1 DESCRIPTION
