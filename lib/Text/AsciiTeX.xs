@@ -4,8 +4,7 @@
 
 #include <asciiTeX.h>
 
-SV* render (SV* eq) {
-  int ll=80;
+SV* c_render (SV* eq, int ll) {
   int i, cols, rows;
   char **screen;
   AV* ret = newAV();
@@ -30,6 +29,7 @@ MODULE = Text::AsciiTeX		PACKAGE = Text::AsciiTeX
 PROTOTYPES: DISABLE
 
 SV *
-render (eq)
+c_render (eq, ll)
 	SV*	eq
+	int	ll
 

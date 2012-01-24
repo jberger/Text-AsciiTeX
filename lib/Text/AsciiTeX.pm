@@ -13,6 +13,13 @@ XSLoader::load('Text::AsciiTeX', $VERSION);
 
 our @EXPORT = ( qw/ render / );
 
+sub render {
+  my ($eq, $columns) = @_;
+  $columns = (defined $columns) ? $columns : 80;
+
+  return c_render($eq, $columns);
+}
+
 1;
 
 __END__

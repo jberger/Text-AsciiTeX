@@ -1,7 +1,7 @@
 use strict;
 use warnings;
 
-use Test::More tests => 3;
+use Test::More tests => 5;
 
 use Text::AsciiTeX;
 
@@ -21,3 +21,14 @@ use Text::AsciiTeX;
   my $text = render('\exp');
   is( $text->[0], 'exp', "escaping function works as desired");
 }
+
+{
+  my $text = render('1+1', 3);
+  is( $text->[0], "1 +", "Restricted columns");
+}
+
+{
+  my $text = render('\pi'x80, 0);
+  is( $text->[0], 'pi'x80, "Zero column limit for non-breaking");
+}
+
