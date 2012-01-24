@@ -1,5 +1,12 @@
 Revision history for Perl extension Text::AsciiTeX.
 
+0.03  
+	- not back compatible to 0.02! 
+	- render is now context aware
+		- List: returns art row list
+		- Scalar: returns newline joined string
+		- Void: prints Scalar result to selected handle
+
 0.02  Mon Jan 23 2012
 	- render now warns on errors from AsciiTeX
 	- render now accepts second arg (ll in AsciiTeX)

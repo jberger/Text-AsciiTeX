@@ -20,7 +20,22 @@ sub render {
   $eq ||= '';
   $columns = (defined $columns) ? $columns : 80;
 
-  return c_render($eq, $columns);
+  my $text_array = c_render($eq, $columns);
+
+  my $wantarray = wantarray;
+
+  if ($wantarray) {
+    return @$text_array;
+  }
+
+  my $text_string = join "\n", @$text_array;
+
+  if (defined $wantarray) {
+    return $text_string;
+  } 
+
+  print $text_string;
+  return;
 }
 
 1;
@@ -36,8 +51,17 @@ Text::AsciiTeX - Convert (La)TeX formulas to ASCII art
 =head1 SYNOPSIS
 
  use Text::AsciiArt;
+
+ #equivalent examples
+
+ my @text_array = render('\frac{1}{e}');
+ print "$_\n" for @text_array;
+
  my $text_array = render('\frac{1}{e}');
- print "$_\n" for @$text_array;
+ print "$text_array\n";
+
+ render('\frac{1}{e}');
+ print "\n";
 
 =head1 DESCRIPTION
 
@@ -49,9 +73,33 @@ This module exports the C<render> function.
 
 =head2 C<< render( $latex [, $columns] ) >>
 
-The function C<render> accepts a string containing a formula in (La)TeX formatting. Optionally, an integer may be given to specify the number of columns for the output or zero for no-breaking. The default number of columns is 80. The return value is an array reference. Each element of the array is a string for each row of the art. Printing each line, terminated by a newline will probably do what you expect.
+=head3 Argument(s)
 
-For examples and a list of allowed syntax read L<Text::AsciiTeX::Syntax>.
+The function C<render> accepts a string containing a formula in (La)TeX formatting. Optionally, an integer may be given to specify the number of columns for the output or zero for no-breaking. The default number of columns is 80.
+
+=head3 Return
+
+Since version 0.03 the return value is context aware.
+
+=over
+
+=item *
+
+In list context, C<render> returns a list whose elements are strings, one for each row of the art. Printing each line, terminated by a newline will probably do what you expect.
+
+=item *
+
+In scalar context, C<render> will return a string of the lines joined by newlines.
+
+=item *
+
+In void context, C<render> will print the scalar context return directly to the C<select>ed file handle (usually <STDOUT>).
+
+=back
+
+=head1 EXAMPLES
+
+For use examples see L</SYNOPSIS>. For a list of allowed syntax and syntax examples read L<Text::AsciiTeX::Syntax>.
 
 =head1 UNDERLYING TECHNOLOGIES
 
