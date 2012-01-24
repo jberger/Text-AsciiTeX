@@ -12,7 +12,7 @@ use Text::AsciiTeX;
 
 {
   my $text = render('\frac{1}{e}');
-  is($text, "1\n-\ne", "Renders 1/e (scalar context)");
+  is($text, "1\n-\ne\n", "Renders 1/e (scalar context)");
 }
 
 {
@@ -21,7 +21,7 @@ use Text::AsciiTeX;
   my $old_stdout = select($handle);
 
   render('\frac{1}{e}');
-  is($text, "1\n-\ne", "Renders 1/e (void context)");
+  is($text, "1\n-\ne\n", "Renders 1/e (void context)");
 
   select($old_stdout);
 }

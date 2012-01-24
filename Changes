@@ -4,7 +4,7 @@ Revision history for Perl extension Text::AsciiTeX.
 	- not back compatible to 0.02! 
 	- render is now context aware
 		- List: returns art row list
-		- Scalar: returns newline joined string
+		- Scalar: returns string concat each row ended with newline
 		- Void: prints Scalar result to selected handle
 
 0.02  Mon Jan 23 2012

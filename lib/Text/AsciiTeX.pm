@@ -28,7 +28,7 @@ sub render {
     return @$text_array;
   }
 
-  my $text_string = join "\n", @$text_array;
+  my $text_string = join( "\n", @$text_array ) . "\n";
 
   if (defined $wantarray) {
     return $text_string;
@@ -58,10 +58,9 @@ Text::AsciiTeX - Convert (La)TeX formulas to ASCII art
  print "$_\n" for @text_array;
 
  my $text_array = render('\frac{1}{e}');
- print "$text_array\n";
+ print $text_array;
 
  render('\frac{1}{e}');
- print "\n";
 
 =head1 DESCRIPTION
 
@@ -89,7 +88,7 @@ In list context, C<render> returns a list whose elements are strings, one for ea
 
 =item *
 
-In scalar context, C<render> will return a string of the lines joined by newlines.
+In scalar context, C<render> will return a string of the concatenated lines, each ended with a newline.
 
 =item *
 
