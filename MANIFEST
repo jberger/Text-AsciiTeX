@@ -1,4 +1,5 @@
 Build.PL
+Changes
 lib/Text/AsciiTeX.pm
 lib/Text/AsciiTeX.xs
 lib/Text/AsciiTeX/Syntax.pod
