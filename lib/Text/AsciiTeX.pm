@@ -92,7 +92,7 @@ In scalar context, C<render> will return a string of the concatenated lines, eac
 
 =item *
 
-In void context, C<render> will print the scalar context return directly to the C<select>ed file handle (usually <STDOUT>).
+In void context, C<render> will print the scalar context return directly to the C<select>ed file handle (usually C<STDOUT>).
 
 =back
 
