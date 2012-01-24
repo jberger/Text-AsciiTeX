@@ -2,6 +2,9 @@ Revision history for Perl extension Text::AsciiTeX.
 
 0.02  
 	- render now warns on errors from AsciiTeX
+	- render now accepts second arg (ll in AsciiTeX)
+		specifying columns (defaults to 80)
+	- render is now a Perl function, which calls c_render in XS
 
 0.01  Mon Jan 23 2012 
 	- original version
