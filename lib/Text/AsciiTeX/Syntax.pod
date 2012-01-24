@@ -1,4 +1,8 @@
-=head1 DESCRIPTION OF AsciiTeX SYNTAX
+=head1 NAME
+
+Text::AsciiTeX::Syntax - A description of the syntax accepted by Text::AsciiTeX
+
+=head1 SYNTAX
 
 =over
 
@@ -146,3 +150,4 @@ You can pass any of these examples to C<render> to see what it does.
  
 This document is a direct port from the documenation of asciiTeX program written by Bart Pieters. See L<http://asciitex.sourceforge.net/>.
 
+=cut
