@@ -11,7 +11,7 @@
 /* prevents collision of free() with Perl's free() in XS */
 #include "MyFree.h"
 
-SV* c_render (SV* eq, int ll) {
+AV* c_render (SV* eq, int ll) {
   int i, cols, rows;
   char **screen;
   AV* ret = newAV();
@@ -28,14 +28,14 @@ SV* c_render (SV* eq, int ll) {
   }
   MyFree(screen);
 
-  return newRV_noinc((SV*)ret);
+  return ret;
 }
 
 MODULE = Text::AsciiTeX		PACKAGE = Text::AsciiTeX	
 
 PROTOTYPES: DISABLE
 
-SV *
+AV *
 c_render (eq, ll)
 	SV*	eq
 	int	ll
