@@ -1,5 +1,8 @@
 Revision history for Perl extension Text::AsciiTeX.
 
+0.04
+	- simplfied the XS logic a little bit
+
 0.04  Tue Jan 24 2012
 	- added ppport.h
 	- fixed portability bug [XS redefines free()!]
