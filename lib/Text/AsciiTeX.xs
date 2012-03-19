@@ -11,12 +11,12 @@
 /* prevents collision of free() with Perl's free() in XS */
 #include "MyFree.h"
 
-AV* c_render (SV* eq, int ll) {
+AV* c_render (char* eq, int ll) {
   int i, cols, rows;
   char **screen;
   AV* ret = newAV();
 
-  screen = asciiTeX(SvPV_nolen(eq), ll, &cols, &rows);
+  screen = asciiTeX(eq, ll, &cols, &rows);
 
   for (i = 0; i < rows; i++)
   {
@@ -37,6 +37,6 @@ PROTOTYPES: DISABLE
 
 AV *
 c_render (eq, ll)
-	SV*	eq
+	char*	eq
 	int	ll
 
