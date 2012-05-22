@@ -15,6 +15,7 @@ AV* c_render (char* eq, int ll) {
   int i, cols, rows;
   char **screen;
   AV* ret = newAV();
+  sv_2mortal((SV*)ret);
 
   screen = asciiTeX(eq, ll, &cols, &rows);
 
