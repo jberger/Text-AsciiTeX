@@ -1,6 +1,6 @@
 Revision history for Perl extension Text::AsciiTeX.
 
-0.05
+0.05  Tue May 22 2012
 	- simplfied the XS logic a little bit
 
 0.04  Tue Jan 24 2012

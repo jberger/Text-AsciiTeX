@@ -36,3 +36,5 @@ src/perl/MyFree.h
 src/perl/ppport.h
 t/00-use.t
 t/render.t
+META.yml
+META.json
