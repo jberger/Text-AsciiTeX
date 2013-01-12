@@ -50,7 +50,7 @@ Text::AsciiTeX - Convert (La)TeX formulas to ASCII art
 
 =head1 SYNOPSIS
 
- use Text::AsciiArt;
+ use Text::AsciiTeX;
 
  #equivalent examples
 
